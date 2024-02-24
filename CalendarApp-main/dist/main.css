@@ -1,0 +1,120 @@
+:root{
+    --lighter-background: #d6e7f0;
+    --light-background: #B4DAED;
+    --soft-background: #ffffff;
+    --hard-background: #92b9b2;
+    --dark-background: #0F163F;
+    --selected-background: #ddb503;
+}
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto';
+    font-size: large;
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-content: center;
+
+    background-repeat: no-repeat;
+    background: linear-gradient(var(--soft-background), var(--hard-background));
+}
+
+.title{
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 1%;
+}
+
+/* Nav bar styling*/
+
+.navigation-box{
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    justify-content: space-between;
+    background-color: var(--lighter-background);
+    border-radius: 2rem;
+    
+}
+.navigation-box.month-name{
+    align-self: center;
+
+}
+
+.navigation-button{
+    color: var(--dark-background);
+    min-width: 3rem;
+    background-color: var(--light-background);
+    border-width: 0;
+    border-radius: 2rem;
+}
+
+/* Grid styling*/
+.grid-container {
+    display                 : grid;
+    grid-template-columns   : repeat(7, 2fr);
+    align-content           : center;
+}
+
+.grid-item {
+    background-color: transparent;
+    border: 0;
+    min-width: 2.5rem;
+    border-radius: 10%;
+    justify-self: center;
+    font-family: 'Roboto';
+    font-size: x-large;
+
+}
+
+.grid-item:hover{
+    background-color: var(--light-background);
+    transition: 0.2s;
+
+}
+.grid-item.title {
+    font-weight: bold;
+    align-self: center;
+
+
+}
+
+.grid-item.current-day {
+    color: var(--dark-background);
+    background-color: var(--hard-background);
+    border: 0;
+    justify-self: center;
+}
+
+.grid-item.current-day:hover{
+    background-color: var(--light-background);
+    transition: 0.2s;
+
+}
+
+.grid-item.past-day {
+    color: rgb(124, 124, 124);
+    border: 0;
+    justify-self: center;
+}
+
+.even-row{
+    background-color: var(--soft-background);
+}
+
+.odd-row{
+    background-color: var(--hard-background);
+}
+
+.current-month{
+    color: #0D332D;
+    font-weight: bold;
+}
+
+.non-current-month{
+    color: #858585;
+    font-weight: 300;
+}
